@@ -1,149 +1,15 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  
-   <header class="navbar">
-    <div class="nav-left">
-      <div class="logo"></div>
-      <span class="brand">GeniusLab</span>
-    </div>
-    <nav class="nav-links">
-      <a href="#">Explore</a>
-      <a href="#">Home</a>
-    </nav>
-    <button class="checkout-btn">Checkout</button>
-  </header>
-
-  <!-- Welcome Section -->
-  <section class="welcome">
-    <h1>Welcome to your learning journey, where education meets opportunity.</h1>
-    <div class="welcome-buttons">
-      <button class="btn primary">Explore our classes</button>
-    </div>
-  </section>
+  <div id="app">
+    <RouterView /> <!-- Vue Router will render the correct page -->
+  </div>
 </template>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
-}
 
-/* Navbar */
-.navbar {
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: #000;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo {
-  font-size: 1.5rem;
-  background: white;
-  color: black;
-  border-radius: 5px;
-  padding: 0.3rem 0.5rem;
-}
-
-.brand {
-  font-size: 1.1rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #a78bfa; /* light purple hover */
-}
-
-.checkout-btn {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
+#app {
   text-align: center;
-  color: #a78bfa;
-  background-color: black;
-  border: 2px solid #fff;
-  border-radius: 15px;
-  box-shadow: 5px 9px #a78bfa;
 }
-
-.checkout-btn:hover {
-  box-shadow: 0px 5px #a78bfa;
-  transform: translateY(4px);
-}
-
-/* Welcome Section */
-.welcome {
-  text-align: center;
-  padding: 6rem 2rem;
-  background-color: #fff;
-  color: #000;
-}
-
-.welcome h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  line-height: 1.3;
-  max-width: 900px;
-  margin: 0 auto 3rem auto;
-}
-
-.welcome-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.btn {
-  border: none;
-  padding: 0.8rem 2rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-/*#d8c4fc*/
-.btn.primary {
-  background-color: white;
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  color: black;
-  border: 2px solid rgba(184, 175, 218, 0.6);
-  border-radius: 15px;
-  box-shadow: 5px 9px #b8afda;
-}
-
-.btn.primary:hover {
-  box-shadow: 0px 5px #a78bfa;
-  transform: translateY(4px);
-}
-
-
 </style>
